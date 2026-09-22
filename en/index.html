@@ -409,20 +409,6 @@
     /* Retos, lignes empilees. Volontairement different des grilles de cartes du deck. */
 
 
-    /* Le moteur donne 100vw au hero de l'introduction, largeur qui ne suit pas
-       l'echelle appliquee par fitSlide : le visuel finit en retrait. Correctif local,
-       en attendant le fix moteur deja inscrit au HANDOFF. */
-    .slide.slide-introduction { padding: 0; }
-    .slide-introduction .slide-inner { padding-left: 0; padding-right: 0; max-width: none; }
-    .slide-introduction .intro-hero { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
-
-    /* fitSlide recentre le slide-inner en reservant 16px de marge par rapport au
-       viewport, mais le slide part deja decale de 20px a droite par le nav-collapsed
-       du moteur. Cote droit, la marge tombe pile sur ces 16px ; cote gauche l'ecart
-       cumule les deux (2x20+16=56px, verifie a la mesure). On etire le hero de 42px
-       vers la gauche pour ramener les deux bords pres du meme 16px, sans toucher le moteur. */
-    .slide-introduction .intro-hero { margin-left: -42px; width: calc(100% + 42px); }
-
     /* Cinquieme statistique ajoutee a la bande : le padding fixe (70px) et la taille
        de chiffre (48px) du moteur, pensees pour 4 cartes, deborderaient a 1280px
        avec une 5e. Resserre localement, sans toucher la regle partagee. */
